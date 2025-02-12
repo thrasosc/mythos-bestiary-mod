@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "mythos_bestiary",
+  "version": "${version}",
+  "name": "Mythos Bestiary",
+  "description": "Bring Ancient Greek Creatures to Life",
+  "authors": [
+    "Thrasos"
+  ],
+  "contact": {
+    "homepage": "https://pixeldreamstudios.net"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/mythos_bestiary/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.pixeldreamstudios.mythos_bestiary.fabric.MythosBestiaryFabric"
+    ],
+    "client": [
+      "net.pixeldreamstudios.mythos_bestiary.fabric.client.MythosBestiaryFabricClient"
+    ]
+  },
+  "mixins": [
+    "mythos_bestiary.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "architectury": ">=13.0.8",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
