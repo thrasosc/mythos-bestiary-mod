@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'mythos_bestiary'
+rootProject.name = 'Mythos Bestiary'
 
 include 'common'
 include 'fabric'
