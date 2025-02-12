@@ -1,5 +1,6 @@
 plugins {
     id 'com.github.johnrengelman.shadow'
+    id "me.shedaniel.unified-publishing"
 }
 
 architectury {
@@ -38,6 +39,8 @@ dependencies {
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
+
+    implementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"
 }
 
 processResources {
@@ -55,4 +58,43 @@ shadowJar {
 
 remapJar {
     input.set shadowJar.archiveFile
+}
+
+unifiedPublishing {
+    project {
+        displayName = "Mythos Bestiary $project.version"
+        gameVersions = ["${minecraft_version}"]
+        gameLoaders = ["fabric"]
+        releaseType = "release" // Optional, use "release", "beta" or "alpha"
+        changelog = rootProject.file("changelog.md").text
+
+        mainPublication tasks.remapJar // Declares the publicated jar
+
+        relations {
+            depends {
+                curseforge = "architectury-api"
+                modrinth = "architectury-api"
+            }
+            depends {
+                curseforge = "azurelib"
+                modrinth = "azurelib"
+            }
+        }
+
+        var cfToken = System.getenv("CURSEFORGE_TOKEN")
+        if (cfToken != null) {
+            curseforge {
+                token = cfToken
+                id = "699989" // Required, must be a string, ID of CurseForge project
+            }
+        }
+
+        var mrToken = System.getenv("MODRINTH_TOKEN")
+        if (mrToken != null) {
+            modrinth {
+                token = mrToken
+                id = "avrKhvsK" // Required, must be a string, ID of Modrinth project
+            }
+        }
+    }
 }
