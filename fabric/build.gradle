@@ -26,7 +26,7 @@ configurations {
 }
 
 repositories {
-    maven { url 'https://maven.terraformersmc.com/releases' } // Needed for Fabric only at the moment (for AzureLib)
+    maven { url 'https://maven.terraformersmc.com/releases' }
 }
 
 dependencies {
