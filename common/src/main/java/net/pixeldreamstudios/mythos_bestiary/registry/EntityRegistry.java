@@ -22,9 +22,9 @@ import java.util.function.Supplier;
 public class EntityRegistry {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(MythosBestiary.MOD_ID, Registries.ENTITY_TYPE);
 
-    public static final RegistrySupplier<EntityType<Cyclops>> CYCLOPS = registerEntity("cyclops", Cyclops::new, MobCategory.CREATURE, 1.5f, 2.9f);
-    public static final RegistrySupplier<EntityType<Minotaur>> MINOTAUR = registerEntity("minotaur", Minotaur::new, MobCategory.CREATURE, 1.5f, 2.9f);
-    public static final RegistrySupplier<EntityType<Satyr>> SATYR = registerEntity("satyr", Satyr::new, MobCategory.CREATURE, 1.5f, 2.9f);
+    public static final RegistrySupplier<EntityType<Cyclops>> CYCLOPS = registerEntity("cyclops", Cyclops::new, MobCategory.CREATURE, 1.75f, 4.0f);
+    public static final RegistrySupplier<EntityType<Minotaur>> MINOTAUR = registerEntity("minotaur", Minotaur::new, MobCategory.CREATURE, 1.5f, 3.2f);
+    public static final RegistrySupplier<EntityType<Satyr>> SATYR = registerEntity("satyr", Satyr::new, MobCategory.CREATURE, 0.75f, 1.75f);
 
     private static void initSpawns() {
         registerSpawnPlacements(EntityRegistry.CYCLOPS, Cyclops::checkMobSpawnRules);
