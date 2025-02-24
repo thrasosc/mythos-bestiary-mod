@@ -6,7 +6,6 @@ import net.pixeldreamstudios.mythos_bestiary.MythosBestiary;
 @Mod(MythosBestiary.MOD_ID)
 public final class MythosBestiaryNeoForge {
     public MythosBestiaryNeoForge() {
-        // Run our common setup.
         MythosBestiary.init();
     }
 }

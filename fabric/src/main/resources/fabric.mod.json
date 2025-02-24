@@ -20,7 +20,7 @@
       "net.pixeldreamstudios.mythos_bestiary.fabric.MythosBestiaryFabric"
     ],
     "client": [
-      "net.pixeldreamstudios.mythos_bestiary.fabric.client.MythosBestiaryFabricClient"
+      "net.pixeldreamstudios.mythos_bestiary.fabric.MythosBestiaryFabricClient"
     ],
     "modmenu": [
       "net.pixeldreamstudios.mythos_bestiary.fabric.ModMenuIntegration"

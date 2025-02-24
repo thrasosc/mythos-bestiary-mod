@@ -1,4 +1,4 @@
-package net.pixeldreamstudios.mythos_bestiary.fabric.client;
+package net.pixeldreamstudios.mythos_bestiary.fabric;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.pixeldreamstudios.mythos_bestiary.MythosBestiary;
