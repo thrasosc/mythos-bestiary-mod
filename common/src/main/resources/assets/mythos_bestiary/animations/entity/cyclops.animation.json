@@ -1,0 +1,87 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.geometry.humanoid.new": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": {
+						"vector": [-17.06543, -0.00935, -0.03806]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"vector": [0, 37.5, 25]
+					}
+				},
+				"bone13": {
+					"rotation": {
+						"vector": [-72.5, 0, 0]
+					}
+				},
+				"bone22": {
+					"rotation": {
+						"vector": [-26.50648, 47.13536, -34.23216]
+					}
+				},
+				"bone10": {
+					"rotation": {
+						"vector": [62.5, 0, 0]
+					}
+				},
+				"body": {
+					"rotation": {
+						"vector": [20, 0, 0]
+					}
+				},
+				"bone3": {
+					"rotation": {
+						"vector": [-30, 0, 0]
+					}
+				},
+				"bone5": {
+					"rotation": {
+						"vector": [35, 0, 0]
+					}
+				},
+				"bone14": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"bone15": {
+					"rotation": {
+						"vector": [47.5, 0, 0]
+					}
+				},
+				"bone20": {
+					"rotation": {
+						"vector": [-10, 0, 0]
+					}
+				},
+				"bone4": {
+					"rotation": {
+						"vector": [0, -37.5, -25]
+					}
+				},
+				"bone7": {
+					"rotation": {
+						"vector": [-72.5, 0, 0]
+					}
+				},
+				"bone9": {
+					"rotation": {
+						"vector": [-26.50648, -47.13536, 34.23216]
+					}
+				}
+			}
+		},
+		"animation.geometry.humanoid.new2": {
+			"loop": true
+		},
+		"animation.geometry.humanoid.new3": {
+			"loop": true
+		}
+	},
+	"azurelib_format_version": 2
+}
