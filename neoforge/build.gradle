@@ -80,6 +80,10 @@ unifiedPublishing {
                 curseforge = "azurelib"
                 modrinth = "azurelib"
             }
+            depends {
+                curseforge = "cloth-config"
+                modrinth = "cloth-config"
+            }
         }
 
         var cfToken = System.getenv("CURSEFORGE_TOKEN")

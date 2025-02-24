@@ -75,12 +75,24 @@ unifiedPublishing {
 
         relations {
             depends {
+                curseforge = "fabric-api"
+                modrinth = "fabric-api"
+            }
+            depends {
                 curseforge = "architectury-api"
                 modrinth = "architectury-api"
             }
             depends {
                 curseforge = "azurelib"
                 modrinth = "azurelib"
+            }
+            depends {
+                curseforge = "cloth-config"
+                modrinth = "cloth-config"
+            }
+            optional {
+                curseforge = "modmenu"
+                modrinth = "modmenu"
             }
         }
 
