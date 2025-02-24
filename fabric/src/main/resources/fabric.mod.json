@@ -33,10 +33,13 @@
     "fabricloader": ">=0.16.10",
     "minecraft": "~1.21.1",
     "java": ">=21",
-    "architectury": ">=13.0.8",
     "fabric-api": "*",
+    "architectury": ">=13.0.8",
     "azurelib": ">=3.0.0",
     "cloth-config": ">=15.0.140"
+  },
+  "recommends":  {
+    "modmenu": "*"
   },
   "custom": {
     "modmenu": {
