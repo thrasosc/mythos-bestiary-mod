@@ -5,7 +5,7 @@ import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.level.Level;
 
 public class Satyr extends AbstractMythicalMob{
-    protected Satyr(EntityType<? extends PathfinderMob> entityType, Level level) {
+    public Satyr(EntityType<? extends PathfinderMob> entityType, Level level) {
         super(entityType, level);
     }
 }
