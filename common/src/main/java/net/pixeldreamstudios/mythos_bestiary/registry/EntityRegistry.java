@@ -14,6 +14,7 @@ import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.pixeldreamstudios.mythos_bestiary.MythosBestiary;
 import net.pixeldreamstudios.mythos_bestiary.world.entity.mythical.Cyclops;
+import net.pixeldreamstudios.mythos_bestiary.world.entity.mythical.Minotaur;
 import net.pixeldreamstudios.mythos_bestiary.world.entity.mythical.Satyr;
 
 import java.util.function.Supplier;
@@ -22,11 +23,15 @@ public class EntityRegistry {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(MythosBestiary.MOD_ID, Registries.ENTITY_TYPE);
 
     public static final RegistrySupplier<EntityType<Cyclops>> CYCLOPS = registerEntity("cyclops", Cyclops::new, MobCategory.CREATURE, 1.5f, 2.9f);
+    public static final RegistrySupplier<EntityType<Minotaur>> MINOTAUR = registerEntity("minotaur", Minotaur::new, MobCategory.CREATURE, 1.5f, 2.9f);
     public static final RegistrySupplier<EntityType<Satyr>> SATYR = registerEntity("satyr", Satyr::new, MobCategory.CREATURE, 1.5f, 2.9f);
 
     private static void initSpawns() {
-        registerSpawnPlacements(EntityRegistry.CYCLOPS, Satyr::checkMobSpawnRules);
+        registerSpawnPlacements(EntityRegistry.CYCLOPS, Cyclops::checkMobSpawnRules);
         addBiomeProperties(TagRegistry.CYCLOPS_BIOMES, MobCategory.CREATURE, CYCLOPS.get(), MythosBestiary.config.cyclopsSpawnWeight, 1, 1);
+
+        registerSpawnPlacements(EntityRegistry.MINOTAUR, Minotaur::checkMobSpawnRules);
+        addBiomeProperties(TagRegistry.MINOTAUR_BIOMES, MobCategory.CREATURE, MINOTAUR.get(), MythosBestiary.config.minotaurSpawnWeight, 1, 1);
 
         registerSpawnPlacements(EntityRegistry.SATYR, Satyr::checkMobSpawnRules);
         addBiomeProperties(TagRegistry.SATYR_BIOMES, MobCategory.CREATURE, SATYR.get(), MythosBestiary.config.satyrSpawnWeight, 3, 5);
@@ -58,8 +63,9 @@ public class EntityRegistry {
     }
 
     private static void initAttributes() {
-        EntityAttributeRegistry.register(SATYR, Satyr::createAttributes);
         EntityAttributeRegistry.register(CYCLOPS, Cyclops::createAttributes);
+        EntityAttributeRegistry.register(MINOTAUR, Minotaur::createAttributes);
+        EntityAttributeRegistry.register(SATYR, Satyr::createAttributes);
     }
 
     public static void init() {

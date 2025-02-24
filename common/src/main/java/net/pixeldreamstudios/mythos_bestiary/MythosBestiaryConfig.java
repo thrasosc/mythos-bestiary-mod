@@ -19,6 +19,19 @@ public class MythosBestiaryConfig implements ConfigData {
     @ConfigEntry.Gui.NoTooltip
     @ConfigEntry.BoundedDiscrete(max = 100)
     public int cyclopsSpawnWeight = 10;
+    // Minotaur
+    @ConfigEntry.Category("minotaur")
+    @ConfigEntry.Gui.NoTooltip
+    @ConfigEntry.BoundedDiscrete(min = 1, max = 100)
+    public int minotaurHealth = 10;
+    @ConfigEntry.Category("minotaur")
+    @ConfigEntry.Gui.NoTooltip
+    @ConfigEntry.BoundedDiscrete(min = 1, max = 20)
+    public int minotaurAttackDamage = 2;
+    @ConfigEntry.Category("minotaur")
+    @ConfigEntry.Gui.NoTooltip
+    @ConfigEntry.BoundedDiscrete(max = 100)
+    public int minotaurSpawnWeight = 10;
     // Satyr
     @ConfigEntry.Category("satyr")
     @ConfigEntry.Gui.NoTooltip

@@ -7,6 +7,7 @@ import mod.azure.azurelib.common.internal.common.AzureLib;
 import net.pixeldreamstudios.mythos_bestiary.registry.EntityRegistry;
 import net.pixeldreamstudios.mythos_bestiary.registry.TabRegistry;
 import net.pixeldreamstudios.mythos_bestiary.world.entity.client.render.CyclopsRenderer;
+import net.pixeldreamstudios.mythos_bestiary.world.entity.client.render.MinotaurRenderer;
 import net.pixeldreamstudios.mythos_bestiary.world.entity.client.render.SatyrRenderer;
 
 public final class MythosBestiary {
@@ -24,7 +25,8 @@ public final class MythosBestiary {
     }
 
     public static void initClient() {
-        EntityRendererRegistry.register(EntityRegistry.SATYR, SatyrRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.CYCLOPS, CyclopsRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.MINOTAUR, MinotaurRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.SATYR, SatyrRenderer::new);
     }
 }

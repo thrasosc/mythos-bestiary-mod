@@ -5,13 +5,18 @@
 
   "text.autoconfig.mythos_bestiary.title": "Mythos Bestiary",
 
-  "text.autoconfig.mythos_bestiary.category.satyr": "Satyr",
-  "text.autoconfig.mythos_bestiary.option.satyrHealth": "Satyr Health",
-  "text.autoconfig.mythos_bestiary.option.satyrAttackDamage": "Satyr Attack Damage",
-  "text.autoconfig.mythos_bestiary.option.satyrSpawnWeight": "Satyr Spawn Weight",
-
   "text.autoconfig.mythos_bestiary.category.cyclops": "Cyclops",
   "text.autoconfig.mythos_bestiary.option.cyclopsHealth": "Cyclops Health",
   "text.autoconfig.mythos_bestiary.option.cyclopsAttackDamage": "Cyclops Attack Damage",
-  "text.autoconfig.mythos_bestiary.option.cyclopsSpawnWeight": "Cyclops Spawn Weight"
+  "text.autoconfig.mythos_bestiary.option.cyclopsSpawnWeight": "Cyclops Spawn Weight",
+
+  "text.autoconfig.mythos_bestiary.category.minotaur": "Minotaur",
+  "text.autoconfig.mythos_bestiary.option.minotaurHealth": "Minotaur Health",
+  "text.autoconfig.mythos_bestiary.option.minotaurAttackDamage": "Minotaur Attack Damage",
+  "text.autoconfig.mythos_bestiary.option.minotaurSpawnWeight": "Minotaur Spawn Weight",
+
+  "text.autoconfig.mythos_bestiary.category.satyr": "Satyr",
+  "text.autoconfig.mythos_bestiary.option.satyrHealth": "Satyr Health",
+  "text.autoconfig.mythos_bestiary.option.satyrAttackDamage": "Satyr Attack Damage",
+  "text.autoconfig.mythos_bestiary.option.satyrSpawnWeight": "Satyr Spawn Weight"
 }
