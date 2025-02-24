@@ -1,0 +1,11 @@
+{
+  "category.mythos_bestiary": "Mythos Bestiary",
+
+  "entity.mythos_bestiary.satyr": "Satyr",
+
+  "text.autoconfig.mythos_bestiary.title": "Mythos Bestiary",
+  "text.autoconfig.mythos_bestiary.category.satyr": "Satyr",
+  "text.autoconfig.mythos_bestiary.option.satyrHealth": "Satyr Health",
+  "text.autoconfig.mythos_bestiary.option.satyrAttackDamage": "Satyr Attack Damage",
+  "text.autoconfig.mythos_bestiary.option.satyrSpawnWeight": "Satyr Spawn Weight"
+}

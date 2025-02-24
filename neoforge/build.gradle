@@ -41,6 +41,7 @@ dependencies {
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
 
     implementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"
+    modApi "me.shedaniel.cloth:cloth-config-neoforge:${rootProject.cloth_config_version}"
 }
 
 processResources {

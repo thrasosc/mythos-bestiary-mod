@@ -16,7 +16,7 @@ public class SatyrRenderer extends AzEntityRenderer<Satyr> {
             MythosBestiary.MOD_ID, "textures/entity/satyr/satyr_1.png"
     );
 
-    protected SatyrRenderer(AzEntityRendererConfig<Satyr> config, EntityRendererProvider.Context context) {
+    public SatyrRenderer(EntityRendererProvider.Context context) {
         super(
                 AzEntityRendererConfig.<Satyr>builder(MODEL, TEXTURE)
                         .setAnimatorProvider(SatyrAnimator::new)
