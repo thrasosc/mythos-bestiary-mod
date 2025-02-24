@@ -21,6 +21,9 @@
     ],
     "client": [
       "net.pixeldreamstudios.mythos_bestiary.fabric.client.MythosBestiaryFabricClient"
+    ],
+    "modmenu": [
+      "net.pixeldreamstudios.mythos_bestiary.fabric.ModMenuIntegration"
     ]
   },
   "mixins": [
