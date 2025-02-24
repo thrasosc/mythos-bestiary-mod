@@ -7,40 +7,59 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.pixeldreamstudios.mythos_bestiary.MythosBestiary;
+import net.pixeldreamstudios.mythos_bestiary.world.entity.mythical.Cyclops;
 import net.pixeldreamstudios.mythos_bestiary.world.entity.mythical.Satyr;
+
+import java.util.function.Supplier;
 
 public class EntityRegistry {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(MythosBestiary.MOD_ID, Registries.ENTITY_TYPE);
 
-    public static final RegistrySupplier<EntityType<Satyr>> SATYR = ENTITIES.register("satyr", () ->
-            EntityType.Builder.of(Satyr::new, MobCategory.CREATURE)
-                    .sized(1.5f, 2.9f)
-                    .build(ResourceLocation.fromNamespaceAndPath(MythosBestiary.MOD_ID, "satyr").toString())
-    );
+    public static final RegistrySupplier<EntityType<Cyclops>> CYCLOPS = registerEntity("cyclops", Cyclops::new, MobCategory.CREATURE, 1.5f, 2.9f);
+    public static final RegistrySupplier<EntityType<Satyr>> SATYR = registerEntity("satyr", Satyr::new, MobCategory.CREATURE, 1.5f, 2.9f);
 
     private static void initSpawns() {
+        registerSpawnPlacements(EntityRegistry.CYCLOPS, Satyr::checkMobSpawnRules);
+        addBiomeProperties(TagRegistry.CYCLOPS_BIOMES, MobCategory.CREATURE, CYCLOPS.get(), MythosBestiary.config.cyclopsSpawnWeight, 1, 1);
+
+        registerSpawnPlacements(EntityRegistry.SATYR, Satyr::checkMobSpawnRules);
+        addBiomeProperties(TagRegistry.SATYR_BIOMES, MobCategory.CREATURE, SATYR.get(), MythosBestiary.config.satyrSpawnWeight, 3, 5);
+    }
+
+    public static RegistrySupplier registerEntity(String id, EntityType.EntityFactory entityFactory, MobCategory category, float hitboxWidth, float hitboxHeight) {
+        RegistrySupplier registrySupplier = ENTITIES.register(id, () ->
+                EntityType.Builder.of(entityFactory, category)
+                        .sized(hitboxWidth, hitboxHeight)
+                        .build(ResourceLocation.fromNamespaceAndPath(MythosBestiary.MOD_ID, id).toString())
+        );
+        return registrySupplier;
+    }
+
+    private static <T extends Mob> void registerSpawnPlacements(Supplier<? extends EntityType<T>> type, SpawnPlacements.SpawnPredicate<T> spawnPredicate) {
         SpawnPlacementsRegistry.register(
-                EntityRegistry.SATYR,
+                type,
                 SpawnPlacementTypes.ON_GROUND,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                Satyr::checkMobSpawnRules
+                spawnPredicate
         );
+    }
+
+    private static void addBiomeProperties(TagKey<Biome> tag, MobCategory category, EntityType<?> entityType, int spawnWeight, int minGroup, int maxGroup) {
         BiomeModifications.addProperties(
-                b -> b.hasTag(TagRegistry.SATYR_BIOMES),
-                (ctx, b) -> b.getSpawnProperties().addSpawn(
-                        MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(SATYR.get(), MythosBestiary.config.satyrSpawnWeight, 3, 5)
-                )
+                b -> b.hasTag(tag),
+                (ctx, b) -> b.getSpawnProperties().addSpawn(category, new MobSpawnSettings.SpawnerData(entityType, spawnWeight, minGroup, maxGroup))
         );
     }
 
     private static void initAttributes() {
         EntityAttributeRegistry.register(SATYR, Satyr::createAttributes);
+        EntityAttributeRegistry.register(CYCLOPS, Cyclops::createAttributes);
     }
 
     public static void init() {

@@ -12,4 +12,8 @@ public class TagRegistry {
             Registries.BIOME,
             ResourceLocation.fromNamespaceAndPath(MythosBestiary.MOD_ID, "satyrs_spawn_in")
     );
+    public static TagKey<Biome> CYCLOPS_BIOMES = TagKey.create(
+            Registries.BIOME,
+            ResourceLocation.fromNamespaceAndPath(MythosBestiary.MOD_ID, "cyclopes_spawn_in")
+    );
 }
