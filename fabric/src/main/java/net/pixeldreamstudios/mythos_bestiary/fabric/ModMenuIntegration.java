@@ -8,6 +8,6 @@ import net.pixeldreamstudios.mythos_bestiary.MythosBestiaryConfig;
 public class ModMenuIntegration implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return parent -> AutoConfig.getConfigScreen(MythosBestiaryConfig.class, parent).get();
+        return screen -> AutoConfig.getConfigScreen(MythosBestiaryConfig.class, screen).get();
     }
 }
