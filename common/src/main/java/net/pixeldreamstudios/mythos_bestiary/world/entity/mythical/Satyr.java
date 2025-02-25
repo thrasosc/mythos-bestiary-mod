@@ -26,6 +26,15 @@ public class Satyr extends AbstractMythicalMob {
         super(entityType, level);
     }
 
+    public static AttributeSupplier.Builder createAttributes() {
+        return Monster.createMobAttributes()
+                .add(Attributes.MAX_HEALTH, MythosBestiary.config.satyrHealth)
+                .add(Attributes.ATTACK_DAMAGE, MythosBestiary.config.satyrAttackDamage)
+                .add(Attributes.ATTACK_SPEED, 2)
+                .add(Attributes.ATTACK_KNOCKBACK, 1)
+                .add(Attributes.MOVEMENT_SPEED, 0.3);
+    }
+
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder) {
         super.defineSynchedData(builder);
@@ -34,15 +43,6 @@ public class Satyr extends AbstractMythicalMob {
 
     protected int getTypeVariant() {
         return this.entityData.get(DATA_ID_TYPE_VARIANT);
-    }
-
-    public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, MythosBestiary.config.satyrHealth)
-                .add(Attributes.ATTACK_DAMAGE, MythosBestiary.config.satyrAttackDamage)
-                .add(Attributes.ATTACK_SPEED, 2)
-                .add(Attributes.ATTACK_KNOCKBACK, 1)
-                .add(Attributes.MOVEMENT_SPEED, 0.3);
     }
 
     @Override
