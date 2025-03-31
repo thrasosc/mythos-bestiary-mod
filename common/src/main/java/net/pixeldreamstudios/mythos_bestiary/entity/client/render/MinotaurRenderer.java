@@ -24,6 +24,6 @@ public class MinotaurRenderer extends AzEntityRenderer<Minotaur> {
                         .build(),
                 context
         );
-        this.shadowRadius = 1.25f;
+        this.shadowRadius = 1.0F;
     }
 }

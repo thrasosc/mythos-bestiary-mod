@@ -24,6 +24,6 @@ public class CyclopsRenderer extends AzEntityRenderer<Cyclops> {
                         .build(),
                 context
         );
-        this.shadowRadius = 1.3f;
+        this.shadowRadius = 1.0F;
     }
 }
