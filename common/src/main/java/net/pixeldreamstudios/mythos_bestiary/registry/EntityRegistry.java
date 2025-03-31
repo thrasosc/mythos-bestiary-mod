@@ -22,7 +22,7 @@ public class EntityRegistry {
 
     public static final RegistrySupplier<EntityType<Cyclops>> CYCLOPS = ENTITIES.register("cyclops", () ->
             EntityType.Builder.of(Cyclops::new, MobCategory.CREATURE)
-                    .sized(1.75f, 4.0f)
+                    .sized(1.5f, 3.75f)
                     .build(ResourceLocation.fromNamespaceAndPath(MythosBestiary.MOD_ID, "cyclops").toString()));
 
     public static final RegistrySupplier<EntityType<Minotaur>> MINOTAUR = ENTITIES.register("minotaur", () ->
