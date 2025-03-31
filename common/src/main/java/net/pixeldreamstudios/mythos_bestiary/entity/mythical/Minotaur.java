@@ -1,5 +1,6 @@
 package net.pixeldreamstudios.mythos_bestiary.entity.mythical;
 
+import mod.azure.azurelib.common.api.common.ai.pathing.AzureNavigation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -11,6 +12,7 @@ import net.pixeldreamstudios.mythos_bestiary.MythosBestiary;
 public class Minotaur extends AbstractMythicalMob{
     public Minotaur(EntityType<? extends PathfinderMob> entityType, Level level) {
         super(entityType, level);
+        this.navigation = new AzureNavigation(this, level);
     }
 
     public static AttributeSupplier.Builder createAttributes() {
