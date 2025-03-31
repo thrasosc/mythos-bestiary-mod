@@ -22,4 +22,10 @@ public class Cyclops extends AbstractMythicalMob{
                 .add(Attributes.ATTACK_KNOCKBACK, 1)
                 .add(Attributes.MOVEMENT_SPEED, 0.3);
     }
+
+    @Override
+    protected SoundEvent getAmbientSound() {
+        this.playSound(SoundEvents.VILLAGER_AMBIENT, 1.0F, 0.2F);
+        return null;
+    }
 }
