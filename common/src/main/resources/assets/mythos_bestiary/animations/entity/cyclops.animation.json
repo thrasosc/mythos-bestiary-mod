@@ -354,6 +354,14 @@
 						}
 					}
 				}
+			},
+			"sound_effects": {
+				"0.5": {
+					"effect": "step"
+				},
+				"1.5": {
+					"effect": "step"
+				}
 			}
 		},
 		"idle": {
