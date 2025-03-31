@@ -11,6 +11,7 @@ import net.pixeldreamstudios.mythos_bestiary.MythosBestiary;
 public class Cyclops extends AbstractMythicalMob{
     public Cyclops(EntityType<? extends PathfinderMob> entityType, Level level) {
         super(entityType, level);
+        this.navigation = new AzureNavigation(this, level);
     }
 
     public static AttributeSupplier.Builder createAttributes() {
