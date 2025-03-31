@@ -1,4 +1,4 @@
-package net.pixeldreamstudios.mythos_bestiary.world.entity.client.render;
+package net.pixeldreamstudios.mythos_bestiary.entity.client.render;
 
 import com.google.common.collect.Maps;
 import mod.azure.azurelib.rewrite.render.entity.AzEntityRenderer;
@@ -7,9 +7,9 @@ import net.minecraft.Util;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.pixeldreamstudios.mythos_bestiary.MythosBestiary;
-import net.pixeldreamstudios.mythos_bestiary.world.entity.animator.SatyrAnimator;
-import net.pixeldreamstudios.mythos_bestiary.world.entity.mythical.Satyr;
-import net.pixeldreamstudios.mythos_bestiary.world.entity.variant.SatyrVariant;
+import net.pixeldreamstudios.mythos_bestiary.entity.animator.SatyrAnimator;
+import net.pixeldreamstudios.mythos_bestiary.entity.mythical.Satyr;
+import net.pixeldreamstudios.mythos_bestiary.entity.variant.SatyrVariant;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package net.pixeldreamstudios.mythos_bestiary.world.entity.mythical;
+package net.pixeldreamstudios.mythos_bestiary.entity.mythical;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;

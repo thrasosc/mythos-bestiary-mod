@@ -13,9 +13,9 @@ import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.pixeldreamstudios.mythos_bestiary.MythosBestiary;
-import net.pixeldreamstudios.mythos_bestiary.world.entity.mythical.Cyclops;
-import net.pixeldreamstudios.mythos_bestiary.world.entity.mythical.Minotaur;
-import net.pixeldreamstudios.mythos_bestiary.world.entity.mythical.Satyr;
+import net.pixeldreamstudios.mythos_bestiary.entity.mythical.Cyclops;
+import net.pixeldreamstudios.mythos_bestiary.entity.mythical.Minotaur;
+import net.pixeldreamstudios.mythos_bestiary.entity.mythical.Satyr;
 
 public class EntityRegistry {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(MythosBestiary.MOD_ID, Registries.ENTITY_TYPE);

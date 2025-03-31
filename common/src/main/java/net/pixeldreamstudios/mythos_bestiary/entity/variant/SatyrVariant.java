@@ -1,4 +1,4 @@
-package net.pixeldreamstudios.mythos_bestiary.world.entity.variant;
+package net.pixeldreamstudios.mythos_bestiary.entity.variant;
 
 import java.util.Arrays;
 import java.util.Comparator;

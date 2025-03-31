@@ -1,4 +1,4 @@
-package net.pixeldreamstudios.mythos_bestiary.world.entity.mythical;
+package net.pixeldreamstudios.mythos_bestiary.entity.mythical;
 
 import net.minecraft.Util;
 import net.minecraft.nbt.CompoundTag;
@@ -16,7 +16,7 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.pixeldreamstudios.mythos_bestiary.MythosBestiary;
-import net.pixeldreamstudios.mythos_bestiary.world.entity.variant.SatyrVariant;
+import net.pixeldreamstudios.mythos_bestiary.entity.variant.SatyrVariant;
 import org.jetbrains.annotations.Nullable;
 
 public class Satyr extends AbstractMythicalMob {

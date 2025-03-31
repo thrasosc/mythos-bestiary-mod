@@ -1,11 +1,11 @@
-package net.pixeldreamstudios.mythos_bestiary.world.entity.animator;
+package net.pixeldreamstudios.mythos_bestiary.entity.animator;
 
 import mod.azure.azurelib.rewrite.animation.controller.AzAnimationController;
 import mod.azure.azurelib.rewrite.animation.controller.AzAnimationControllerContainer;
 import mod.azure.azurelib.rewrite.animation.impl.AzEntityAnimator;
 import net.minecraft.resources.ResourceLocation;
 import net.pixeldreamstudios.mythos_bestiary.MythosBestiary;
-import net.pixeldreamstudios.mythos_bestiary.world.entity.mythical.Minotaur;
+import net.pixeldreamstudios.mythos_bestiary.entity.mythical.Minotaur;
 import org.jetbrains.annotations.NotNull;
 
 public class MinotaurAnimator extends AzEntityAnimator<Minotaur> {

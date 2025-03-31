@@ -1,4 +1,4 @@
-package net.pixeldreamstudios.mythos_bestiary.world.entity.helper;
+package net.pixeldreamstudios.mythos_bestiary.entity.helper;
 
 import mod.azure.azurelib.rewrite.animation.dispatch.command.AzCommand;
 import mod.azure.azurelib.rewrite.animation.play_behavior.AzPlayBehaviors;

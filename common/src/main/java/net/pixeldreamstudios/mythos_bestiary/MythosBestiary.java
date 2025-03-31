@@ -6,9 +6,9 @@ import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import mod.azure.azurelib.common.internal.common.AzureLib;
 import net.pixeldreamstudios.mythos_bestiary.registry.EntityRegistry;
 import net.pixeldreamstudios.mythos_bestiary.registry.TabRegistry;
-import net.pixeldreamstudios.mythos_bestiary.world.entity.client.render.CyclopsRenderer;
-import net.pixeldreamstudios.mythos_bestiary.world.entity.client.render.MinotaurRenderer;
-import net.pixeldreamstudios.mythos_bestiary.world.entity.client.render.SatyrRenderer;
+import net.pixeldreamstudios.mythos_bestiary.entity.client.render.CyclopsRenderer;
+import net.pixeldreamstudios.mythos_bestiary.entity.client.render.MinotaurRenderer;
+import net.pixeldreamstudios.mythos_bestiary.entity.client.render.SatyrRenderer;
 
 public final class MythosBestiary {
     public static final String MOD_ID = "mythos_bestiary";
